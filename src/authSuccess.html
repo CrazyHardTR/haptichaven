@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self' 'unsafe-inline'">
+  <title>Authorization Successful!</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #282c34;
+      color: white;
+      overflow: hidden;
+      background: radial-gradient(circle, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.30)), #282c34;
+    }
+
+    .intro-screen {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      opacity: 1;
+      transition: opacity 1s ease;
+    }
+
+    h1 {
+      font-size: 3rem;
+      font-weight: 600;
+      margin-bottom: 0px;
+    }
+
+    p {
+      font-family: 'Poppins', sans-serif;
+      font-size: 16px;
+      margin-top: 0px;
+      margin-bottom: 24px;
+      color: #9c9c9c;
+    }
+  </style>
+</head>
+<body>
+  <div class="intro-screen">
+    <h1>Authorization Successful!</h1>
+    <p>You can now close this window and return to the application.</p>
+  </div>
+</body>
+</html>

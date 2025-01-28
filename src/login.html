@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self' 'unsafe-inline'">
+  <title>HapticHaven | Discord Login</title>
+
+  <!-- Adding Google Fonts for a modern look -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #282c34;
+      color: white;
+      background: radial-gradient(circle, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.30)), #282c34;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .login-container {
+      text-align: center;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+
+    h1 {
+      font-family: 'Poppins', sans-serif;
+      margin-bottom: 0px;
+      margin-top: 0px;
+    }
+
+    p {
+      font-family: 'Poppins', sans-serif;
+      font-size: 16px;
+      margin-top: 0;
+      margin-bottom: 50px;
+      color:#9c9c9c
+    }
+
+    button {
+      font-family: 'Poppins', sans-serif;
+      background-color: #5865F2;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      font-size: 16px;
+      border-radius: 4px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 200px;
+      height: 50px;
+      position: relative;
+      transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #4752C4;
+      transform: translateY(-3px);
+      box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    .dot-flashing {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 10px;
+      height: 10px;
+      border-radius: 5px;
+      background-color: #5865F2;
+      color: #5865F2;
+      animation: dot-flashing 1s infinite linear alternate;
+      animation-delay: 0.5s;
+    }
+
+    .dot-flashing::before, .dot-flashing::after {
+      content: "";
+      display: inline-block;
+      position: absolute;
+      top: 0;
+    }
+
+    .dot-flashing::before {
+      left: -15px;
+      width: 10px;
+      height: 10px;
+      border-radius: 5px;
+      background-color: #5865F2;
+      color: #5865F2;
+      animation: dot-flashing 1s infinite alternate;
+      animation-delay: 0s;
+    }
+
+    .dot-flashing::after {
+      left: 15px;
+      width: 10px;
+      height: 10px;
+      border-radius: 5px;
+      background-color: #5865F2;
+      color: #5865F2;
+      animation: dot-flashing 1s infinite alternate;
+      animation-delay: 1s;
+    }
+
+    @keyframes dot-flashing {
+      0% {
+        background-color: #c3c7ec;
+      }
+      50%, 100% {
+        background-color: rgba(211, 211, 211, 0.2);
+      }
+    }
+
+    .fade-in {
+      opacity: 0;
+      display: block;
+      transition: opacity 1s ease;
+    }
+
+    .fade-out {
+      opacity: 0;
+      transition: opacity 1s ease;
+    }
+
+    .fade-in-active {
+      opacity: 1;
+    }
+
+  </style>
+</head>
+<body data-page="login" class="fade-in">
+  <div class="login-container">
+    <h1>Step 2: Discord Login</h1>
+    <p>Connect your bot to your Discord account via the button below.</p>
+    <button id="login-button">
+      <span id="login-text">Login via Discord</span>
+      <span id="dot-loader" class="dot-flashing" style="display: none;"></span>
+    </button>
+  </div>
+  <script src="./renderer.js"></script>
+  <script>
+    window.onload = () => {
+      const body = document.body;
+      body.classList.add('fade-in');
+  
+      setTimeout(() => {
+        body.classList.add('fade-in-active');
+      }, 100);
+    };
+  </script>
+</body>
+</html>

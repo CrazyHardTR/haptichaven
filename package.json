@@ -1,0 +1,41 @@
+{
+  "name": "haptichaven",
+  "version": "0.1.0",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "description": "Elevate your Discord experience.",
+  "dependencies": {
+    "axios": "^1.7.9",
+    "buttplug": "^3.2.2",
+    "discord.js": "^14.14.1",
+    "dotenv": "^16.4.7",
+    "electron-store": "^10.0.0",
+    "express": "^4.21.2",
+    "keytar": "^7.9.0",
+    "querystring": "^0.2.1",
+    "ws": "^8.18.0"
+  },
+  "devDependencies": {
+    "electron": "^34.0.1",
+    "electron-builder": "^25.1.8"
+  },
+  "build": {
+    "appId": "com.haptichaven.app",
+    "productName": "HapticHaven",
+    "win": {
+      "target": "nsis",
+      "icon": "./src/HH.ico"
+    },
+    "directories": {
+      "output": "dist"
+    }
+  }
+}
