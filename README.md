@@ -42,10 +42,12 @@ Before you can set up and run the HapticHaven app, you'll need the following:
     - Click **Create**.
 
 2. **Give the Bot the Correct Permissions:**
-    - Navigate to the **OAuth2** page.
-    - Under **OAuth2 URL Generator**, select **bot** in the scopes section.
-    - Under **Bot Permissions**, select **Connect** and **View Channels**.
-    - Copy the generated URL and open it in a new tab to add the bot to your server.
+    - Navigate to the **Installation** page.
+    - Check off **'User Install'** and select **'Guild Install'** instead.
+    - Scroll down to **'Default Install Settings**.
+    - Under the dropdown menu for scopes, include **bot**.
+    - Under the dropdown menu for permissions, include **Connect** and **View Channels**.
+    - Click **Save Changes**.
 
 3. **Setup the OAuth2 Connection:**
     - Under **OAuth2** > **Redirects**, click **Add Redirect** and input:
@@ -60,7 +62,7 @@ Before you can set up and run the HapticHaven app, you'll need the following:
 
 5. **Set up the correct Privileged Gateway Intents:**
     - On the **Bot** page, scroll down to the **Privileged Gateway Intents** section.
-    - Enable **Presence Intent**, **Server Members Intent**, and **Message Content Intent**.
+    - Enable **Server Members Intent** and **Message Content Intent**.
     - Click **Save Changes**.
 
 ## Installation
